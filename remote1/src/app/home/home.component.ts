@@ -1,0 +1,29 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
+})
+export class HomeComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+  isDetailsVisible = false;
+
+  detailsData = {
+    name: 'Home',
+    location: '123 Main St'
+  };
+
+  showDetails() {
+    this.isDetailsVisible = true;
+  }
+
+  hideDetails() {
+    this.isDetailsVisible = false;
+  }
+}

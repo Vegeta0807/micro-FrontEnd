@@ -1,0 +1,9 @@
+<div class="details-container" *ngIf="details">
+    <button class="back-button" (click)="onBack()">
+        <i class="material-icons">arrow_back</i>
+    </button>
+    <h3>Details</h3>
+    <p>Name: {{ details.name }}</p>
+    <p>Location: {{ details.location }}</p>
+</div>
+  

@@ -1,0 +1,15 @@
+<h1>Remote 1 Home</h1>
+<div class="custom-separator"></div>
+<div *ngIf="!isDetailsVisible">
+    <div class="card" (click)="showDetails()">
+      <div class="card-header">
+        <h2>Home</h2>
+      </div>
+      <div class="card-body">
+        <p>Click to view details</p>
+      </div>
+    </div>
+  </div>
+  
+  <app-details *ngIf="isDetailsVisible" [details]="detailsData" (back)="hideDetails()"></app-details>
+  

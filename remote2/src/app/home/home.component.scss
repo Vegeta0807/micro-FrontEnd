@@ -1,0 +1,74 @@
+.remote2-home {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .cards-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card {
+    border: 1px solid #5934d9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    overflow: hidden;
+    margin: 10px;
+    max-width: 300px;
+    background-color: #fff;
+    justify-content: center;
+    align-items: center; 
+    text-align: center; 
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  h3 {
+    margin: 0 0 0 0;
+  }
+  
+  p {
+    margin: 0;
+    color: #666;
+  }
+  
+  .card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-header {
+    height: 42px;
+    background-color: #1e3a8a;
+    padding: 16px;
+    border-bottom: 1px solid #ddd;
+    font-weight: bold;
+    color: #fff;
+    font-size: 1em;
+    align-content: center;
+  }
+  
+  .card-body {
+    padding: 8px;
+    background: black;
+    font-size: 1em;
+    color: white;
+  }
+
+  h1 {
+    margin-bottom: 10px;
+  }
+
+.custom-separator {
+  height: 2px;
+  background-color: #ccc;
+  margin: 20px 0;
+  border-radius: 1px;
+}

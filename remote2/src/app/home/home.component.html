@@ -1,0 +1,19 @@
+<h1>Remote 2 Home</h1>
+<div class="custom-separator"></div>
+<div class="remote2-home">
+    <div *ngIf="!selectedCard"
+    class="cards-container">
+      <div class="card" *ngFor="let card of cards" (click)="selectCard(card)">
+        <h3 class="card-header">{{ card.title }}</h3>
+        <p class="card-body">{{ card.cardBody }}</p>
+      </div>
+    </div>
+  
+    <!-- Child component to show card details -->
+    <app-details
+      *ngIf="selectedCard"
+      [card]="selectedCard"
+      (back)="clearSelection()"
+    ></app-details>
+  </div>
+  
