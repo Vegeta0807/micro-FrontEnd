@@ -1,0 +1,23 @@
+# Ignore node_modules for all projects
+**/node_modules/
+
+# Ignore build output
+**/dist/
+**/out-tsc/
+
+# Ignore environment files (if you want to keep them private)
+**/src/environments/environment*.ts
+
+# Ignore IDE/editor-specific files
+.DS_Store
+.vscode/
+.idea/
+
+# Ignore log files
+*.log
+
+# Ignore any local config files
+*.local
+
+# Ignore coverage reports
+coverage/

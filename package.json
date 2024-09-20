@@ -1,0 +1,15 @@
+{
+  "name": "mfe",
+  "version": "0.0.1",
+  "scripts": {
+    "test:host": "cd host && ng test --watch=false",
+    "test:remote1": "cd remote1 && ng test --watch=false",
+    "test:remote2": "cd remote2 && ng test --watch=false",
+    "test:all": "npm run test:host && npm run test:remote1 && npm run test:remote2",
+    "build:all": "npm run build --prefix ./host && npm run build --prefix ./remote1 && npm run build --prefix ./remote2",
+    "serve:all": "npm run serve --prefix ./host & npm run serve --prefix ./remote1 & npm run serve --prefix ./remote2"
+  },
+  "devDependencies": {
+    "http-server": "^0.12.3"
+  }
+}
