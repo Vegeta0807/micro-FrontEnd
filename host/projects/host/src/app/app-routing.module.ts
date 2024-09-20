@@ -24,10 +24,10 @@ const routes: Routes = [
       import('remoteapp2/homeModule').then((module) => module.HomeModule),
   },
   {
-    path:'away',
-    loadChildren: () => 
-      import('remoteapp1/awayModule').then((module) => module.AwayModule)
-  }
+    path: 'away',
+    loadChildren: () =>
+      import('remoteapp1/awayModule').then((module) => module.AwayModule),
+  },
 ];
 
 @NgModule({
