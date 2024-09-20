@@ -6,10 +6,21 @@
     "test:remote1": "cd remote1 && ng test --watch=false",
     "test:remote2": "cd remote2 && ng test --watch=false",
     "test:all": "npm run test:host && npm run test:remote1 && npm run test:remote2",
-    "build:all": "npm run build --prefix ./host && npm run build --prefix ./remote1 && npm run build --prefix ./remote2",
-    "serve:all": "npm run serve --prefix ./host & npm run serve --prefix ./remote1 & npm run serve --prefix ./remote2"
+    "build:host:dev": "cd host && ng build --configuration development",
+    "build:host:prod": "cd host && ng build --configuration production",
+    "build:remote1:dev": "cd remote1 && ng build --configuration development",
+    "build:remote1:prod": "cd remote1 && ng build --configuration production",
+    "build:remote2:dev": "cd remote2 && ng build --configuration development",
+    "build:remote2:prod": "cd remote2 && ng build --configuration production",
+    "build:all:dev": "npm run build:host:dev && npm run build:remote1:dev && npm run build:remote2:dev",
+    "build:all:prod": "npm run build:host:prod && npm run build:remote1:prod && npm run build:remote2:prod",
+    "serve:host": "http-server ./host/dist/host -p 4200",
+    "serve:remote1": "http-server ./remote1/dist/remote1 -p 5000",
+    "serve:remote2": "http-server ./remote2/dist/remote2 -p 5001",
+    "serve:all": "npm-run-all --parallel serve:host serve:remote1 serve:remote2"
   },
   "devDependencies": {
-    "http-server": "^0.12.3"
+    "http-server": "^0.12.3",
+    "npm-run-all": "^4.1.5"
   }
 }

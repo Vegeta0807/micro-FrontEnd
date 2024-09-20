@@ -55,8 +55,8 @@
             "development": {
               "fileReplacements": [
                 {
-                  "replace": "projects/host/src/environments/environment.ts",
-                  "with": "projects/host/src/environments/environment.dev.ts"
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.dev.ts"
                 }
               ],
               "buildOptimizer": false,

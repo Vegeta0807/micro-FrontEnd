@@ -6,7 +6,7 @@
 **/out-tsc/
 
 # Ignore environment files (if you want to keep them private)
-**/src/environments/environment*.ts
+# **/src/environments/environment*.ts
 
 # Ignore IDE/editor-specific files
 .DS_Store
