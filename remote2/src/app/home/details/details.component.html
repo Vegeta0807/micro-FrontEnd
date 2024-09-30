@@ -1,8 +1,9 @@
+<div *ngIf="card">
 <div class="details-container">
-    <button class="back-button" (click)="goBack()">
-      <i class="material-icons">arrow_back</i>
-    </button>
-    <h3>{{ card.title }}</h3>
-    <p>{{ card.description }}</p>
-  </div>
-  
+  <button class="back-button" (click)="goBack()">
+    <i class="material-icons">arrow_back</i>
+  </button>
+  <h3>{{ card.title }}</h3>
+  <p>{{ card.description }}</p>
+</div>
+</div>

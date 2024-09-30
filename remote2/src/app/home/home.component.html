@@ -1,19 +1,17 @@
-<h1>Remote 2 Home</h1>
+<h1>Remote 2</h1>
 <div class="custom-separator"></div>
-<div class="remote2-home">
-    <div *ngIf="!selectedCard"
-    class="cards-container">
-      <div class="card" *ngFor="let card of cards" (click)="selectCard(card)">
-        <h3 class="card-header">{{ card.title }}</h3>
-        <p class="card-body">{{ card.cardBody }}</p>
-      </div>
+
+<!-- Only show the cards if no card is selected -->
+<div class="remote2-home" *ngIf="!select">
+  <div class="cards-container">
+    <div class="card" *ngFor="let card of cards">
+      <h3 class="card-header">{{ card.title }}</h3>
+      <p class="card-body">
+        <a [routerLink]="['details']" (click)="selectCard(card)" 
+          >Go to Details</a>
+      </p>
     </div>
-  
-    <!-- Child component to show card details -->
-    <app-details
-      *ngIf="selectedCard"
-      [card]="selectedCard"
-      (back)="clearSelection()"
-    ></app-details>
   </div>
-  
+</div>
+
+<router-outlet></router-outlet>

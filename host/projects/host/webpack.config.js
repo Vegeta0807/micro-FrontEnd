@@ -37,10 +37,10 @@ module.exports = {
 
       // For hosts (please adjust)
       remotes: {
-        remoteapp1: "http://172.16.0.169:5000/remoteEntry.js",
-        remoteapp2: "http://172.16.0.169:5001/remoteEntry.js",
-        // remoteapp1: "http://localhost:5000/remoteEntry.js",
-        // remoteapp2: "http://localhost:5001/remoteEntry.js",
+        // remoteapp1: "http://172.16.0.169:5000/remoteEntry.js",
+        // remoteapp2: "http://172.16.0.169:5001/remoteEntry.js",
+        remoteapp1: "http://localhost:5000/remoteEntry.js",
+        remoteapp2: "http://localhost:5001/remoteEntry.js",
       },
 
       shared: share({

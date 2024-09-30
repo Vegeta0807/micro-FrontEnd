@@ -25,7 +25,7 @@ module.exports = {
     outputModule: true,
   },
   devServer: {
-    port: 5000,
+    port: 5001,
     headers: {
       'Access-Control-Allow-Origin': '*',
     },
