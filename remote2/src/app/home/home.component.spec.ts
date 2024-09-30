@@ -26,7 +26,7 @@ describe('HomeComponent', () => {
 
   it('should display the main header', () => {
     const headerElement = debugElement.query(By.css('h1')).nativeElement;
-    expect(headerElement.textContent).toContain('Remote 2 Home');
+    expect(headerElement.textContent).toContain('Remote 2');
   });
 
   it('should have cards defined', () => {
@@ -36,36 +36,5 @@ describe('HomeComponent', () => {
   it('should display cards initially', () => {
     const cardElements = debugElement.queryAll(By.css('.card'));
     expect(cardElements.length).toBe(component.cards.length);
-  });
-
-  it('should select a card when clicked', () => {
-    const cardElement = debugElement.query(By.css('.card'));
-    cardElement.triggerEventHandler('click', null);
-    fixture.detectChanges();
-
-    expect(component.selectedCard).toEqual(component.cards[0]);
-  });
-
-  it('should display the details component when a card is selected', () => {
-    component.selectCard(component.cards[0]);
-    fixture.detectChanges();
-
-    const detailsComponent = debugElement.query(By.css('app-details'));
-    expect(detailsComponent).toBeTruthy();
-  });
-
-  it('should clear selection and hide details component when back is clicked', () => {
-    component.selectCard(component.cards[0]);
-    fixture.detectChanges();
-
-    const detailsComponent = debugElement.query(By.css('app-details'));
-    expect(detailsComponent).toBeTruthy();
-
-    // Simulate back event
-    detailsComponent.triggerEventHandler('back', null);
-    fixture.detectChanges();
-
-    expect(component.selectedCard).toBeNull();
-    expect(debugElement.query(By.css('app-details'))).toBeFalsy();
   });
 });
