@@ -24,6 +24,12 @@ module.exports = {
   experiments: {
     outputModule: true,
   },
+   devServer: {
+    port: 5000,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
+  },
   plugins: [
     new ModuleFederationPlugin({
       library: { type: "module" },

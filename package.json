@@ -14,9 +14,9 @@
     "build:remote2:prod": "cd remote2 && ng build --configuration production",
     "build:all:dev": "npm run build:host:dev && npm run build:remote1:dev && npm run build:remote2:dev",
     "build:all:prod": "npm run build:host:prod && npm run build:remote1:prod && npm run build:remote2:prod",
-    "serve:host": "http-server ./host/dist/host -p 4200",
-    "serve:remote1": "http-server ./remote1/dist/remote1 -p 5000",
-    "serve:remote2": "http-server ./remote2/dist/remote2 -p 5001",
+    "serve:host": "http-server ./host/dist/host -p 4200 --cors",
+    "serve:remote1": "http-server ./remote1/dist/remote1 -p 5000 --cors",
+    "serve:remote2": "http-server ./remote2/dist/remote2 -p 5001 --cors",
     "serve:all": "npm-run-all --parallel serve:host serve:remote1 serve:remote2"
   },
   "devDependencies": {
