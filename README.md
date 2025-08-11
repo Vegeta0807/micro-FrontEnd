@@ -4,7 +4,6 @@ This project is a remote micro frontend application built with Angular. It demon
 
 ## **Table of Contents**
 - [Features](#features)
-- [Screenshots](#screenshots)
 - [Getting Started](#getting-started)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
